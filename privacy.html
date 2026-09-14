@@ -73,6 +73,12 @@
     </p>
   </div>
 
+  <p>
+    <strong>Pengembang dan kontak:</strong> Hermes Paljaya ·
+    <strong>anjas.septian.sunjaya@gmail.com</strong>.
+    Alamat ini sama dengan kontak pengembang pada Google Cloud OAuth consent screen.
+  </p>
+
   <h2>1. Data apa yang diakses</h2>
   <p>
     Hermes Paljaya meminta izin berikut lewat layar persetujuan Google. Setiap izin dipakai
@@ -81,14 +87,21 @@
   <div class="scroll">
   <table>
     <tr><th>Izin</th><th>Dipakai untuk</th></tr>
-    <tr><td><code>spreadsheets</code></td><td>Membaca dan menulis data proyek di Google Sheets milik pemilik (nomor surat, volume pekerjaan, nilai pembayaran).</td></tr>
-    <tr><td><code>documents</code></td><td>Membuat dan menyunting draft dokumen proyek di Google Docs.</td></tr>
-    <tr><td><code>drive</code></td><td>Membuka, menyimpan, dan menata berkas proyek di Google Drive milik pemilik.</td></tr>
-    <tr><td><code>gmail.readonly</code>, <code>gmail.modify</code>, <code>gmail.send</code></td><td>Membaca dan menyusun draft surat pengantar proyek, serta mengirimkannya atas perintah eksplisit pemilik.</td></tr>
-    <tr><td><code>calendar</code></td><td>Mencatat dan membaca tenggat pekerjaan proyek.</td></tr>
-    <tr><td><code>contacts.readonly</code></td><td>Mengisi nama dan alamat tujuan surat.</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/spreadsheets</code></td><td>Membaca dan menulis data proyek di Google Sheets milik pemilik (nomor surat, volume pekerjaan, nilai pembayaran).</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/documents</code></td><td>Membuat dan menyunting draft dokumen proyek di Google Docs.</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/drive</code></td><td>Membuka, menyimpan, dan menata berkas proyek di Google Drive milik pemilik.</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/gmail.readonly</code></td><td>Membaca informasi Gmail yang diperlukan untuk pekerjaan surat pengantar proyek.</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/gmail.modify</code></td><td>Menyusun dan memperbarui draft surat pengantar proyek di Gmail.</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/gmail.send</code></td><td>Mengirim surat pengantar hanya atas perintah eksplisit pemilik.</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/calendar</code></td><td>Mencatat dan membaca tenggat pekerjaan proyek.</td></tr>
+    <tr><td><code>https://www.googleapis.com/auth/contacts.readonly</code></td><td>Mengisi nama dan alamat tujuan surat.</td></tr>
   </table>
   </div>
+  <p>
+    The exact scopes configured in Google Cloud must match the scopes actually requested by
+    the application. The owner should remove any scope that is not required by the deployed
+    code; this page is not evidence that an unimplemented feature exists.
+  </p>
 
   <h2>2. Di mana data disimpan</h2>
   <p>
@@ -106,37 +119,71 @@
     Tidak ada layanan pelacak apa pun yang dipasang di aplikasi ini maupun di situs ini.
   </p>
 
-  <h2>4. Berapa lama disimpan</h2>
+  <h2>4. Prinsip Limited Use Google API</h2>
+  <p>
+    Hermes Paljaya hanya menggunakan data Google untuk menyediakan atau meningkatkan fungsi
+    yang dijelaskan di bagian izin di atas. Aplikasi tidak menjual data Google, tidak
+    menggunakannya untuk iklan, credit-worthiness, atau profiling, dan tidak menggunakannya
+    untuk melatih model. Data Google tidak dipindahkan kepada pihak ketiga, kecuali jika
+    diperlukan untuk menyediakan fungsi yang diminta pemilik, diwajibkan oleh hukum, atau
+    sebagai bagian dari merger, akuisisi, atau penjualan aset dengan perlindungan yang setara.
+    Setiap pihak yang menerima data wajib mematuhi pembatasan penggunaan data ini.
+  </p>
+  <p>
+    Secara khusus, aplikasi tidak menggunakan data Gmail untuk menayangkan iklan, dan tidak
+    membaca, menjual, atau membagikan data untuk tujuan selain fungsi yang dinyatakan.
+    Pernyataan ini mengikuti
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>
+    dan persyaratan <em>Limited Use</em>.
+  </p>
+
+  <h2>5. Berapa lama disimpan</h2>
   <p>
     Token akses berlaku sampai dicabut. Hasil olahan sementara disimpan di komputer lokal
     selama masih dibutuhkan untuk pekerjaan yang berjalan, dan bisa dihapus kapan saja oleh
     pemiliknya tanpa memengaruhi data di akun Google.
   </p>
 
-  <h2>5. Cara mencabut akses</h2>
+  <h2>6. Cara menghapus data dan mencabut akses</h2>
+  <p>
+    Karena aplikasi ini tidak memiliki akun pengguna atau server penyimpanan, pemilik dapat
+    menghapus salinan lokal, token OAuth, dan hasil olahan sementara dari komputer tempat
+    aplikasi berjalan. Data yang sudah ditulis ke Google Sheets, Docs, Drive, Gmail, atau
+    Calendar tetap berada di akun Google dan harus dihapus oleh pemilik dari layanan Google
+    tersebut bila memang ingin dihapus.
+  </p>
   <p>
     Pemilik dapat mencabut izin kapan saja lewat
     <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account &rsaquo; Aplikasi pihak ketiga</a>,
-    atau dengan menghapus berkas token di komputer lokal. Setelah dicabut, aplikasi langsung
-    kehilangan seluruh akses.
+    lalu memilih Hermes Paljaya dan memilih <strong>Remove access</strong>. Pemilik juga dapat
+    menghapus berkas token di komputer lokal. Setelah dicabut, aplikasi tidak dapat memperoleh
+    data baru sampai otorisasi diberikan lagi.
   </p>
 
-  <h2>6. Kepatuhan pada kebijakan Google</h2>
+  <h2>7. Keamanan</h2>
+  <p>
+    Token OAuth dan hasil olahan disimpan sebagai berkas lokal pada komputer pemilik, sesuai
+    dengan uraian di atas. Pemilik bertanggung jawab menjaga keamanan komputer dan akun
+    Google tersebut. Tidak ada jaminan keamanan untuk layanan atau perangkat yang tidak
+    dikendalikan oleh pengembang.
+  </p>
+
+  <h2>8. Kepatuhan pada kebijakan Google</h2>
   <p>
     Penggunaan dan pemindahan data yang diperoleh dari Google API oleh aplikasi ini mengikuti
     <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
     termasuk persyaratan <em>Limited Use</em>.
   </p>
 
-  <h2>7. Perubahan</h2>
+  <h2>9. Perubahan</h2>
   <p>
     Bila kebijakan ini berubah, tanggal berlakunya di atas ikut diperbarui.
   </p>
 
-  <h2>8. Kontak</h2>
+  <h2>10. Kontak</h2>
   <p>
-    Pertanyaan soal kebijakan ini bisa dikirim ke alamat email yang tercantum sebagai kontak
-    pengembang di layar persetujuan Google aplikasi ini.
+    Pertanyaan soal kebijakan ini, permintaan penghapusan, atau laporan privasi bisa dikirim
+    ke <strong>anjas.septian.sunjaya@gmail.com</strong>.
   </p>
 
   <h2 class="en">In English (summary)</h2>
@@ -145,9 +192,11 @@
     computer. It accesses only the owner's own Google account, with the owner's own consent,
     to work with construction-project paperwork stored in that account's Sheets, Docs, Drive,
     Gmail and Calendar. Google user data is processed locally, is never sold, shared with third
-    parties, used for advertising or profiling, or used to train any model; no analytics or
-    tracking is used. OAuth tokens are stored as local files on that computer and are never
-    transmitted elsewhere. Access can be revoked at any time via
+    parties except as necessary to provide a user-requested function, required by law, or
+    covered by a qualifying business transaction with equivalent protections. It is not used
+    for advertising or profiling, or to train any model; no analytics or tracking is used.
+    OAuth tokens are stored as local files on that computer and are never transmitted
+    elsewhere. Local copies can be deleted, and access can be revoked at any time via
     <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account &rsaquo; Third-party apps</a>.
     This application's use and transfer of information received from Google APIs adheres to the
     <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
