@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi — Hermes Paljaya</title>
+<style>
+  :root {
+    --bg: #fbfaf9;
+    --fg: #23211f;
+    --muted: #6b6560;
+    --line: #e3ded8;
+    --accent: #2f5d62;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #18171a;
+      --fg: #e8e6e3;
+      --muted: #a09a94;
+      --line: #332f34;
+      --accent: #8fbcb6;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .3rem; letter-spacing: -.02em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; font-size: .95rem; }
+  h2 { font-size: 1.05rem; margin: 2.25rem 0 .6rem; letter-spacing: -.01em; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: .45rem; }
+  a { color: var(--accent); }
+  code {
+    font: .875em ui-monospace, "Cascadia Code", Consolas, monospace;
+    background: color-mix(in srgb, var(--fg) 7%, transparent);
+    padding: .1em .35em; border-radius: .25em;
+  }
+  .box {
+    border: 1px solid var(--line); border-radius: .6rem;
+    padding: 1rem 1.25rem; margin-bottom: 1.5rem;
+    background: color-mix(in srgb, var(--fg) 3%, transparent);
+  }
+  table { border-collapse: collapse; width: 100%; margin: 0 0 1rem; font-size: .95rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: .9rem;
+  }
+  .en { color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Kebijakan Privasi</h1>
+  <p class="sub">Hermes Paljaya · berlaku sejak 14 September 2026</p>
+
+  <div class="box">
+    <p style="margin:0">
+      Aplikasi ini dipakai <strong>satu orang saja — pemiliknya sendiri</strong>. Tidak ada
+      pendaftaran pengguna, tidak ada server yang menampung data, dan tidak ada data milik
+      orang lain yang diproses. Yang diakses hanyalah akun Google milik pemilik aplikasi itu
+      sendiri, atas persetujuannya sendiri.
+    </p>
+  </div>
+
+  <h2>1. Data apa yang diakses</h2>
+  <p>
+    Hermes Paljaya meminta izin berikut lewat layar persetujuan Google. Setiap izin dipakai
+    hanya untuk keperluan yang disebut di sini:
+  </p>
+  <div class="scroll">
+  <table>
+    <tr><th>Izin</th><th>Dipakai untuk</th></tr>
+    <tr><td><code>spreadsheets</code></td><td>Membaca dan menulis data proyek di Google Sheets milik pemilik (nomor surat, volume pekerjaan, nilai pembayaran).</td></tr>
+    <tr><td><code>documents</code></td><td>Membuat dan menyunting draft dokumen proyek di Google Docs.</td></tr>
+    <tr><td><code>drive</code></td><td>Membuka, menyimpan, dan menata berkas proyek di Google Drive milik pemilik.</td></tr>
+    <tr><td><code>gmail.readonly</code>, <code>gmail.modify</code>, <code>gmail.send</code></td><td>Membaca dan menyusun draft surat pengantar proyek, serta mengirimkannya atas perintah eksplisit pemilik.</td></tr>
+    <tr><td><code>calendar</code></td><td>Mencatat dan membaca tenggat pekerjaan proyek.</td></tr>
+    <tr><td><code>contacts.readonly</code></td><td>Mengisi nama dan alamat tujuan surat.</td></tr>
+  </table>
+  </div>
+
+  <h2>2. Di mana data disimpan</h2>
+  <p>
+    Aplikasi ini berjalan di komputer pribadi pemiliknya, bukan di layanan awan. Token akses
+    Google disimpan sebagai berkas lokal di komputer itu dan tidak pernah dikirim ke mana pun.
+    Isi Sheets, Drive, dan email <strong>tetap berada di akun Google pemilik</strong> — aplikasi
+    membacanya saat dibutuhkan, memprosesnya di komputer lokal, lalu menuliskan hasilnya kembali
+    ke akun yang sama.
+  </p>
+
+  <h2>3. Dengan siapa data dibagikan</h2>
+  <p>
+    Tidak dengan siapa pun. Data Google tidak dijual, tidak disewakan, tidak dikirim ke pihak
+    ketiga, dan tidak dipakai untuk iklan, profiling, pelatihan model, maupun analitik.
+    Tidak ada layanan pelacak apa pun yang dipasang di aplikasi ini maupun di situs ini.
+  </p>
+
+  <h2>4. Berapa lama disimpan</h2>
+  <p>
+    Token akses berlaku sampai dicabut. Hasil olahan sementara disimpan di komputer lokal
+    selama masih dibutuhkan untuk pekerjaan yang berjalan, dan bisa dihapus kapan saja oleh
+    pemiliknya tanpa memengaruhi data di akun Google.
+  </p>
+
+  <h2>5. Cara mencabut akses</h2>
+  <p>
+    Pemilik dapat mencabut izin kapan saja lewat
+    <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account &rsaquo; Aplikasi pihak ketiga</a>,
+    atau dengan menghapus berkas token di komputer lokal. Setelah dicabut, aplikasi langsung
+    kehilangan seluruh akses.
+  </p>
+
+  <h2>6. Kepatuhan pada kebijakan Google</h2>
+  <p>
+    Penggunaan dan pemindahan data yang diperoleh dari Google API oleh aplikasi ini mengikuti
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+    termasuk persyaratan <em>Limited Use</em>.
+  </p>
+
+  <h2>7. Perubahan</h2>
+  <p>
+    Bila kebijakan ini berubah, tanggal berlakunya di atas ikut diperbarui.
+  </p>
+
+  <h2>8. Kontak</h2>
+  <p>
+    Pertanyaan soal kebijakan ini bisa dikirim ke alamat email yang tercantum sebagai kontak
+    pengembang di layar persetujuan Google aplikasi ini.
+  </p>
+
+  <h2 class="en">In English (summary)</h2>
+  <p class="en">
+    Hermes Paljaya is a single-user personal automation assistant running on its owner's own
+    computer. It accesses only the owner's own Google account, with the owner's own consent,
+    to work with construction-project paperwork stored in that account's Sheets, Docs, Drive,
+    Gmail and Calendar. Google user data is processed locally, is never sold, shared with third
+    parties, used for advertising or profiling, or used to train any model; no analytics or
+    tracking is used. OAuth tokens are stored as local files on that computer and are never
+    transmitted elsewhere. Access can be revoked at any time via
+    <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account &rsaquo; Third-party apps</a>.
+    This application's use and transfer of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </p>
+
+  <footer>
+    <a href="index.html">&larr; Kembali ke beranda</a>
+  </footer>
+
+</div>
+</body>
+</html>
